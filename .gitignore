@@ -1,0 +1,40 @@
+# --- NetBeans Specifics ---
+# User-specific properties (window layouts, open files, etc.)
+/nbproject/private/
+
+# Compiled class files and build artifacts
+/build/
+/dist/
+/nbdist/
+.nb-gradle/
+
+# --- Java Standard ---
+# Compiled class files
+*.class
+
+# Log files
+*.log
+*.ctxt
+
+# --- OS Specific (Junk files) ---
+# Mac
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# --- Libraries / Jars ---
+# Ignore all JAR files by default to keep repo light
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.rar
+
+# --- EXCEPTIONS ---
+# If you created a 'lib' folder for your MySQL Connector 
+# and you WANT to upload it to Git, uncomment the line below:
+# !/lib/
