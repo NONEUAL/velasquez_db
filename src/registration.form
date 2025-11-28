@@ -62,12 +62,16 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jButtonLoginLink" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="REG_USERNAME" max="32767" attributes="0"/>
-                          <Component id="REG_PASSWORD" min="-2" pref="224" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="REG_USERNAME" max="32767" attributes="0"/>
+                              <Component id="REG_PASSWORD" min="-2" pref="224" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="chkShowPass" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace min="0" pref="499" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="434" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -82,6 +86,7 @@
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="REG_PASSWORD" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="Password" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="chkShowPass" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jButtonSubmit" min="-2" max="-2" attributes="0"/>
@@ -90,7 +95,7 @@
                       <Component id="jButtonLoginLink" min="-2" max="-2" attributes="0"/>
                       <Component id="Incase" min="-2" pref="23" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="0" pref="616" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="615" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -129,6 +134,14 @@
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonLoginLinkActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JToggleButton" name="chkShowPass">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Show"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chkShowPassActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

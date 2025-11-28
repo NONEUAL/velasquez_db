@@ -48,6 +48,7 @@ public class registration  extends javax.swing.JFrame {
         jButtonSubmit = new javax.swing.JButton();
         Incase = new javax.swing.JLabel();
         jButtonLoginLink = new javax.swing.JButton();
+        chkShowPass = new javax.swing.JToggleButton();
 
         label1.setText("label1");
 
@@ -73,6 +74,13 @@ public class registration  extends javax.swing.JFrame {
             }
         });
 
+        chkShowPass.setText("Show");
+        chkShowPass.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chkShowPassActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -88,10 +96,13 @@ public class registration  extends javax.swing.JFrame {
                         .addComponent(Incase)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButtonLoginLink))
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(REG_USERNAME)
-                        .addComponent(REG_PASSWORD, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 499, Short.MAX_VALUE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(REG_USERNAME)
+                            .addComponent(REG_PASSWORD, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(chkShowPass)))
+                .addGap(0, 434, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -102,14 +113,15 @@ public class registration  extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(REG_PASSWORD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Password))
+                    .addComponent(Password)
+                    .addComponent(chkShowPass, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButtonSubmit)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jButtonLoginLink)
                     .addComponent(Incase, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 616, Short.MAX_VALUE))
+                .addGap(0, 615, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -160,6 +172,14 @@ public class registration  extends javax.swing.JFrame {
         }
     }
     }//GEN-LAST:event_jButtonSubmitActionPerformed
+
+    private void chkShowPassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkShowPassActionPerformed
+        if(chkShowPass.isSelected()){
+            REG_PASSWORD.setEchoChar((char)0); 
+        } else {
+            REG_PASSWORD.setEchoChar('*'); 
+        }
+    }//GEN-LAST:event_chkShowPassActionPerformed
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -188,6 +208,7 @@ public class registration  extends javax.swing.JFrame {
     private javax.swing.JPasswordField REG_PASSWORD;
     private javax.swing.JTextField REG_USERNAME;
     private javax.swing.JLabel Username;
+    private javax.swing.JToggleButton chkShowPass;
     private javax.swing.JButton jButtonLoginLink;
     private javax.swing.JButton jButtonSubmit;
     private javax.swing.JPanel jPanel2;

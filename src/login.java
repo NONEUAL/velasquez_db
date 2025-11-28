@@ -55,6 +55,7 @@ public class login extends javax.swing.JFrame {
         LOG_PASSWORD = new javax.swing.JPasswordField();
         jButtonLogin = new javax.swing.JButton();
         jButtonRegisterLink = new javax.swing.JButton();
+        chkShowPass = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -88,6 +89,13 @@ public class login extends javax.swing.JFrame {
             }
         });
 
+        chkShowPass.setText("Show");
+        chkShowPass.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chkShowPassActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -106,7 +114,9 @@ public class login extends javax.swing.JFrame {
                         .addComponent(jButtonRegisterLink)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButtonLogin)))
-                .addGap(0, 499, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(chkShowPass)
+                .addGap(0, 434, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -117,12 +127,13 @@ public class login extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(LOG_PASSWORD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
+                    .addComponent(jLabel3)
+                    .addComponent(chkShowPass, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonLogin)
                     .addComponent(jButtonRegisterLink))
-                .addGap(0, 609, Short.MAX_VALUE))
+                .addGap(0, 608, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -196,6 +207,14 @@ public class login extends javax.swing.JFrame {
         this.dispose(); // Close login window
     }//GEN-LAST:event_jButtonRegisterLinkActionPerformed
 
+    private void chkShowPassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkShowPassActionPerformed
+        if(chkShowPass.isSelected()){
+            LOG_PASSWORD.setEchoChar((char)0);
+        } else {
+            LOG_PASSWORD.setEchoChar('*'); 
+        }
+    }//GEN-LAST:event_chkShowPassActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -218,6 +237,7 @@ public class login extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPasswordField LOG_PASSWORD;
     private javax.swing.JTextField LOG_USERNAME;
+    private javax.swing.JToggleButton chkShowPass;
     private javax.swing.JButton jButtonLogin;
     private javax.swing.JButton jButtonRegisterLink;
     private javax.swing.JLabel jLabel2;
