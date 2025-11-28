@@ -178,7 +178,6 @@ public class login extends javax.swing.JFrame {
     private void jButtonLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLoginActionPerformed
         String username = LOG_USERNAME.getText();
         String password = new String(LOG_PASSWORD.getPassword());
-                // Query to check if user exists
         String queryLogin = "SELECT * from account where username = ? AND password = ?";
         
         try {
@@ -190,7 +189,7 @@ public class login extends javax.swing.JFrame {
             
             if (rs.next()) {
                 JOptionPane.showMessageDialog(null, "Account Matched");
-                // You can add code here to open a Main Menu if you have one
+                
             } else {
                 JOptionPane.showMessageDialog(null, "Invalid Credentials");
             }
